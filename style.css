@@ -4,29 +4,37 @@
 *{
     padding: 0;
     margin: 0;
-    background-color:  beige;}
+    background-color:  white;
+    color: black;}
 
 #section1home {
     width: auto;
     height: auto;
     padding: 0.9%;
     margin: 3%;
-    background-color: rgb(43, 195, 206);
-    border: 2px solid black;}
+       
+    
+    
+    }
 
 .navbar .homenav{
     display: flex;
     flex-direction: row;
     font-size: 0.35cm;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
-
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
+}
+:link {
+        text-decoration: none;
+    }
 .section2allpage {
-    border: 2px solid green;}
+    border: 2px solid white;}
 
 .section3{
-    margin: 0.2;
-    padding: 4%;
-    border:1px solid red;
+    margin: 1.15em;
+    padding: 4;
+    border:1px solid rgb(146, 146, 146);
+    text-align:inherit;
     
 }
 
@@ -53,17 +61,17 @@
     justify-content: center;    
 }
 .stylebutton {
-    border: none;
+    border: 1px solid gray;
     width: 5em;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: rgb(42, 165, 73);   
+    background-color: white;   
     font-size: 18px; 
     border-radius: 15%;
     padding: 0.6em;
     margin: 0.25em;
-    color: white;
+    color: blue;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     cursor: pointer;
 
@@ -73,7 +81,7 @@
 .section4{
     margin: 0;
     padding: 0;
-    border:1px solid yellow;
+    border:none;
     display: flex;
     font-size: medium;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; ;
@@ -82,9 +90,9 @@
 
 
 .section5 {
-    border: 5px solid blue;
+    border: 1px solid gray;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     
 }
@@ -93,11 +101,26 @@
 .img {
     width: 200px;
     height: 200px;
-    border: 2px solid black;
-    margin: 0.5em;
+    border: 1px solid gray;
+    margin: none;
     border-radius: 12%;
+    text-align: center;
+   
 }
+.section5 p {
+    text-align:center;
+    display: flex;
+    justify-content: unset;
 
+}
+.image {
+    border: 1px solid gray;
+    max-width: 60%;
+    max-height: 20%;
+    justify-content: center;
+    display:block;
+    
+}
     
 
 
