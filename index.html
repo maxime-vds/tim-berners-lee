@@ -10,133 +10,247 @@
         * {
           box-sizing: border-box;
         }
-        
-        .flex-container {
-          display: flex;
-          flex-direction: row;
-          font-size: 30px;
-          text-align: center;
-        }
-        
-        .flex-item-left {
-          background-color: #f1f1f1;
-          padding: 10px;
-          flex: 50%;
-          border:1px solid red;
-        }
-        
-        .flex-item-right {
-          background-color: dodgerblue;
-          padding: 10px;
-          flex: 50%;
-          border:1px solid red;
+      
+        body{
+            justify-content: relative;
+            display: block;
+            
         }
         .home {
             box-sizing: border-box;
-            display:inline;       
+            display:inline;               
             
-
         }
         .homenav {
-            border: 1px solid red;
+            
+            margin: 0.6em -0.3em 0.2em ;
+            padding: 0 0 0 0.4em;
+        
         }
         
+        .flex-container {
+          display: flex;
+          flex-direction: column;
+          font-size: 25px;
+          text-align: center;
+          font-family:  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        }
+        .header1 {
+            display: relative;
+            font-size: large;
+            justify-content: left;
+            text-align: left;
+        }
+        .pheader1{
+         font-style: italic; 
+         margin: 0.2em 0 0 0 ; 
+         font-size: medium; 
+        }
+        h1 {
+            font-style: italic; 
+         margin: 0 0 0 0 ;  
+        }
+
+        
+        .flex-item-left {
+          
+          padding: 10px;
+          flex: 50%;
+          
+        }
+        
+        .flex-item-right {
+          background-color: rgb(255, 255, 255);
+          padding: 10px;
+          flex: 50%;
+          border:1px solid rgb(180, 180, 180); 
+          margin: 0.8em 0.4em 0.5em 0.7em;
+          display:block;
+          position: relative;
+          flex-direction: row;
+         
+        }
+        .image {
+            border: 2px solid rgb(224, 224, 224);
+            border-radius: 5%;
+            
+            margin:20px 10px;
+            position: relative;
+            width: 93%;
+            height: auto;
+            display: block;
+            flex-direction: row;
+            
+
+            
+        }
+        .img{
+
+            width: 100%;
+            height: 15.5em;
+            position:relative;
+            display: flex;
+            border-radius: 5%;
+            
+            margin:0 0 0 0;
+            padding: 0 0 0 0 ;
+        }
+        .text-img{
+            display: block;
+            flex-direction: row;
+            font-size: medium;
+            
+        }
+
+
+        .paragraph{
+            font-family:  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-align:left ;
+            margin: 1em;
+            font-size: large;
+        }
+     
+
+        .firstbox {
+            border: 1px solid gray;
+        }
+
         /* Responsive layout - makes a one column-layout instead of two-column layout */
-        @media (max-width: 800px) {
+        @media (min-width: 800px) {
           .flex-container {
             flex-direction: column;
+            padding: 1em 1em 1em;
+          }
+        }
+
+        @media (min-width: 800px) and (max-width: 1200px) {
+          .flex-container {
+            flex-direction: column;
+            padding: 1em 1em 1em 1em;
+          }
+          main{
+            margin: 3em;
+          }
+          .homenav{
+            margin: -2em 0.5em 0.5em -0.4em;
+          }
+          .flex-item-right{
+            margin: 1em 6em 1em 6em;
+            
+          }
+          .img{
+            width: 100%;
+            height: auto;
+          }
+          .auteur {
+            margin: 0em 0em 0em -18em;
+          }
+        }
+
+        @media (min-width: 1250px){
+            .flex-container {
+            flex-direction: row;
           }
         }
         </style>
 </head>
 
-<body>
-
+<body> 
+    <!--Navbar-->
+   
+    <section class="navbar"> <div class="accueil"> all page</div> </section> 
+            
     <main>
-             <!-- etape du site-->
-            <section class="navbar"> <div class="accueil"> all page</div> </section> 
-             
-             
-             <section id="section1home">
+
+            <!-- header -->
+            
+            <section id="section1home">
                 <div class="home"> 
                     <nav class="homenav">
-                        <span class="homenav-item"> <a href="#"> Home </a> </span> > 
-                        <span class="homenav-item"> <a href="#"> Sciences </a> </span> > 
-                        <span class="homenav-item"> <a href="#"> Mathematics</a> </span> >                         
+                        <span class="homenav-item"> <a class="item2" href="#"> Home </a> </span> > 
+                        <span class="homenav-item"> <a class="item2" href="#"> Sciences </a> </span> > 
+                        <span class="homenav-item"> <al class="item2" href="#"> Mathematics</a> </span> >                         
                     </nav> 
                 </div>
             </section>
-            <br>
+            
+
+            <!--body firstbox -->
             
             <section class="firstbox"> 
                 <div class="flex-container">
-                    <div class="home"> </div>
-                    <div class="flex-item-left">1
+                    <div class="flex-item-left">
                         <div class="header1">
                         <h1> Tim Bernes-Lee</h1>
-                        <p> British scientist</p> 
+                        <p class="pheader1"> British scientist</p> 
                     </div>
                     <div class="logovan" >
                         <nav>
-                            <div classe="bbstyle1"> <button class="stylebutton" a href="#">Print</a></button>
+                            <div classe="bbstyle1"> 
+                                <button class="stylebutton" a href="#">Print</a></button>
                                 <button class="stylebutton" a href="#">Cite</a></button>
-                                <button class="stylebutton"a href="#">share</a</button>
-                                <button class="stylebutton"a href="#">Feedback</a></button>
-                                <button class="stylebutton"a href="#"> ...</a></button>
+                                <button class="stylebutton" a href="#">share</a</button>
+                                <button class="stylebutton" a href="#">Feedback</a></button>
+                                <button class="stylebutton" a href="#"> ...</a></button>
                             </div>
                         </nav>
                     </div>    
                     <div class="info">
-                        <p> Alternative titles: Sir Tim Berners-Lee</p>
-                        <p> By <a href="#"> Michael Aaron Dennis</a> Last Updated: Dec 2, 2022  <a href="#">Edit History </a>  </p>
+                        <p class="small"> Alternative titles: Sir Tim Berners-Lee</p>
+                        <p class="small"> By <a class= "item3"href="#"> Michael Aaron Dennis</a> Last Updated: Dec 2, 2022  <a class="item3"href="#">Edit History </a>  </p>
                     </div>
                 </div>
                 
-                    <div class="flex-item-right">2 
-                        <div class="image">
-                            <p><img class= "img" src="./images/British-scientist-Tim-Berners-Lee.webp" alt="Tim Berners-Lee" > <p>Tim Berners-Lee</p> 
-                            </p> 
+                    <div class="flex-item-right"> 
+                        <div class="image"> 
+                            <img class= "img" src="./images/British-scientist-Tim-Berners-Lee.webp" alt="Tim Berners-Lee" > <p class="small">Tim Berners-Lee</p> 
+                            
                                     
                         </div>
                         <div class="text-img">
-                            <p class="center"> <a href="#"> <b> see all media </b> </a></p>
-                           <p> <b>Born:</b> June 8, 1955 (age 67) London England </p> 
-                           </div>   
-                           <br>
-                           <p><b>Founder:</b>World Wide Web Consortium</p> <br>
-                            <p> <b>Inventions: </b>World Wide Web World Wide Web </p>
-                            <a href="#"> See all related content </a>
+                            <p class="center"> <a class="item2" href="#"> see all media </a></p>
+                           <p class="small"> <b>Born:</b> June 8, 1955 (age 67) London England </p> 
+                            
+                           
+                           <p class="small"><b>Founder:</b>World Wide Web Consortium</p> <br>
+                            <p class="small"> <b>Inventions: </b>World Wide Web World Wide Web </p>
+                            <a class="item2" href="#"> See all related content </a>
 
                        </div>
                 </div>
 
+                                         <!--content paragraph-->
 
-            </section>
+                        <section class="content">
+                            <div class="paragraph"> 
+                                <p class="paragraph1"> <b> Tim Berners-Lee</b> , in full <b> Sir Tim Berners-Lee</b>, (born June 8, 1955, <a href="#">London</a>, England),British computer scientist, generally <a href="#">credited </a> as the inventor of the
+                                    <a href="#">World Wide Web </a>   
+                                    n 2004 he was awarded a knighthood by Queen <a href="#"> Elizabeth II</a>  of the United Kingdom and the inaugural Millennium Technology Prize (€1 million) by the Finnish Technology Award Foundation.
+                                </p>
+                                <p class="paragraph1">
+                                    Computing came naturally to Berners-Lee, as both of his parents worked on the Ferranti Mark I, the first commercial computer. (See computer: The first stored-program machines.) After graduating in 1976 from the University of Oxford, Berners-Lee designed computer software for two years at Plessey Telecommunications Ltd., located in Poole, Dorset, England. Following this, he had several positions in the computer industry, including a stint from June to December 1980 as a software engineering consultant at CERN, the European particle physics laboratory in Geneva.
+                                </p>
+                                <p class="paragraph1">
+                                    Computing came naturally to Berners-Lee, as both of his parents worked on the Ferranti Mark I, the first commercial computer. (See computer: The first stored-program machines.) After graduating in 1976 from the University of Oxford, Berners-Lee designed computer software for two years at Plessey Telecommunications Ltd., located in Poole, Dorset, England. Following this, he had several positions in the computer industry, including a stint from June to December 1980 as a software engineering consultant at CERN, the European particle physics laboratory in Geneva.
+                                </p>
+                                <p class="paragraph1">
+                                    From 1991 to 1993 Berners-Lee evangelized the Web. In 1994 in the United States he established the World Wide Web (W3) Consortium at the Massachusetts Institute of Technology’s Laboratory for Computer Science. The consortium, in consultation with others, lends oversight to the Web and the development of standards. In 1999 Berners-Lee became the first holder of the 3Com Founders chair at the Laboratory for Computer Science. His numerous other honours included the National Academy of Engineering’s prestigious Charles Stark Draper Prize (2007). Berners-Lee was the author, along with Mark Fischetti, of Weaving the Web: The Original Design and Ultimate Destiny of the World Wide Web (2000).
+                                </p>
 
-            <section class="content">
-                <div class="paragraph"> 
-                    <p class="paragraph1"> <b> Tim Berners-Lee</b> , in full <b> Sir Tim Berners-Lee</b>, (born June 8, 1955, <a href="#">London</a>, England),British computer scientist, generally <a href="#">credited </a> as the inventor of the
-                        <a href="#">World Wide Web </a>   
-                        n 2004 he was awarded a knighthood by Queen <a href="#"> Elizabeth II</a>  of the United Kingdom and the inaugural Millennium Technology Prize (€1 million) by the Finnish Technology Award Foundation.
-                    </p>
-                    <p class="paragraph1">
-                        Computing came naturally to Berners-Lee, as both of his parents worked on the Ferranti Mark I, the first commercial computer. (See computer: The first stored-program machines.) After graduating in 1976 from the University of Oxford, Berners-Lee designed computer software for two years at Plessey Telecommunications Ltd., located in Poole, Dorset, England. Following this, he had several positions in the computer industry, including a stint from June to December 1980 as a software engineering consultant at CERN, the European particle physics laboratory in Geneva.
-                    </p>
-                    <p class="paragraph1">
-                        Computing came naturally to Berners-Lee, as both of his parents worked on the Ferranti Mark I, the first commercial computer. (See computer: The first stored-program machines.) After graduating in 1976 from the University of Oxford, Berners-Lee designed computer software for two years at Plessey Telecommunications Ltd., located in Poole, Dorset, England. Following this, he had several positions in the computer industry, including a stint from June to December 1980 as a software engineering consultant at CERN, the European particle physics laboratory in Geneva.
-                    </p>
-                    <p class="paragraph1">
-                        From 1991 to 1993 Berners-Lee evangelized the Web. In 1994 in the United States he established the World Wide Web (W3) Consortium at the Massachusetts Institute of Technology’s Laboratory for Computer Science. The consortium, in consultation with others, lends oversight to the Web and the development of standards. In 1999 Berners-Lee became the first holder of the 3Com Founders chair at the Laboratory for Computer Science. His numerous other honours included the National Academy of Engineering’s prestigious Charles Stark Draper Prize (2007). Berners-Lee was the author, along with Mark Fischetti, of Weaving the Web: The Original Design and Ultimate Destiny of the World Wide Web (2000).
-                    </p>
+                            </div>
+                        </section>
 
-                </div>
-            </section>
-            
-            <section class="section7">
-                <div class="auteur"> 
-                    <a href="#"> <p> <i>\</i>  Michael Aaron Denis</p> </a>
-                </div>
-            </section>
+                            <!--footer -->
+                            
+                            <section class="section7">
+                                <div class="auteur"> 
+                                    <a href="#"> <p> <i>\</i>  Michael Aaron Denis</p> </a>
+                                </div>
+                            </section>
+                            </section>
+
+   
 
 
                   
@@ -154,94 +268,7 @@
 
     </main> 
     
-    <!--header-->
-    <section class="section3"> 
-        <div class="header">         
-            <div class="header1">
-                <h1> Tim Bernes-Lee</h1>
-                <p> British scientist</p> 
-            </div>
-            <br>
-            <div class="info">
-                <p> Alternative titles: Sir Tim Berners-Lee</p>
-                <p> By <a href="#"> Michael Aaron Dennis</a> Last Updated: Dec 2, 2022  <a href="#">Edit History </a>  </p>
-            </div>
-            <br>
-            <!--zone logo lien action rapide-->
-            <article class="logo">
-                <div class="logovan" >
-                    <nav>
-                        <div classe="bbstyle1"> <button class="stylebutton" a href="#">Print</a></button>
-                            <button class="stylebutton" a href="#">Cite</a></button>
-                            <button class="stylebutton"a href="#">share</a</button>
-                            <button class="stylebutton"a href="#">Feedback</a></button>
-                            <button class="stylebutton"a href="#"> ...</a></button>
-                        </div>
-                    </nav>
-            </div>
-            </article>
-            <br>
-       </div>
-            
-            
-
-            <section class="section5">
-                <div class="image">
-                    <p><img class= "img" src="./images/British-scientist-Tim-Berners-Lee.webp" alt="Tim Berners-Lee" > <p>Tim Berners-Lee</p> 
-                    </p> 
-                   
-          
-                </div>
-                <div class="text-img">
-                    <p class="center"> <a href="#"> <b> see all media </b> </a></p>
-                   <div class="text-align"> <p> <b>Born:</b> June 8, 1955 (age 67) London England </p> 
-                   </div>   
-                   <br>
-                   <p><b>Founder:</b>World Wide Web Consortium</p> <br>
-                    <p> <b>Inventions: </b>World Wide Web World Wide Web </p> <br>
-                  <div class="buttonplace"> <button class="stylebutton2" a href="#"> See all related content </a></button>  </div>  <br>
-                    
-                    
-                </div>
-                
-            </section>
-            
-         
-            <section class="section6">  
-                 <!--Texte area-->   
-        <section class="section4"> 
-           <div paragraph1> <p class="paragraph1"> <b> Tim Berners-Lee</b> , in full <b> Sir Tim Berners-Lee</b>, (born June 8, 1955, <a href="#">London</a>, England),British computer scientist, generally <a href="#">credited </a> as the inventor of the
-            <a href="#">World Wide Web </a>   
-            n 2004 he was awarded a knighthood by Queen <a href="#"> Elizabeth II</a>  of the United Kingdom and the inaugural Millennium Technology Prize (€1 million) by the Finnish Technology Award Foundation.
-           </p></div> 
-           
-            <div paragraph1> <p class="paragraph1">
-                Computing came naturally to Berners-Lee, as both of his parents worked on the Ferranti Mark I, the first commercial computer. (See computer: The first stored-program machines.) After graduating in 1976 from the University of Oxford, Berners-Lee designed computer software for two years at Plessey Telecommunications Ltd., located in Poole, Dorset, England. Following this, he had several positions in the computer industry, including a stint from June to December 1980 as a software engineering consultant at CERN, the European particle physics laboratory in Geneva.
-               </p></div> 
-            
-                             
-               <div paragraph><p class="paragraph1"> While at CERN, Berners-Lee developed a program for himself, called Enquire, that could store information in files that contained connections (“links”) both within and among separate files—a technique that became known as hypertext. After leaving CERN, Berners-Lee worked for Image Computer Systems Ltd., located in Ferndown, Dorset, where he designed a variety of computer systems. In 1984 he returned to CERN to work on the design of the laboratory’s computer network, developing procedures that allowed diverse computers to communicate with one another and researchers to control remote machines. In 1989 Berners-Lee drew up a proposal for creating a global hypertext document system that would make use of the Internet. His goal was to provide researchers with the ability to share their results, techniques, and practices without having to exchange e-mail constantly. Instead, researchers would place such information “online,” where their peers could immediately retrieve it anytime, day or night. Berners-Lee wrote the software for the first Web server (the central repository for the files to be shared) and the first Web client, or “browser” (the program to access and display files retrieved from the server), between October 1990 and the summer of 1991. The first “killer application” of the Web at CERN was the laboratory’s telephone directory—a mundane beginning for one of the technological wonders of the computer age.</p> 
-            </div> 
-            <div paragraph4> <p class="paragraph1">
-                From 1991 to 1993 Berners-Lee evangelized the Web. In 1994 in the United States he established the World Wide Web (W3) Consortium at the Massachusetts Institute of Technology’s Laboratory for Computer Science. The consortium, in consultation with others, lends oversight to the Web and the development of standards. In 1999 Berners-Lee became the first holder of the 3Com Founders chair at the Laboratory for Computer Science. His numerous other honours included the National Academy of Engineering’s prestigious Charles Stark Draper Prize (2007). Berners-Lee was the author, along with Mark Fischetti, of Weaving the Web: The Original Design and Ultimate Destiny of the World Wide Web (2000).
-            </p> </div> 
-           
-            </section>
-
-           
-            <section class="section7">
-                <footer> 
-                    <a href="#"> <p> <i>\</i>  Michael Aaron Denis</p> </a>
-                </footer>
-            </section>
-
-
-
-
-        </section>
-    </section>
-
-
+    
     
 </body>
 </html>
